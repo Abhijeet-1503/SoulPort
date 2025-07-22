@@ -1,0 +1,188 @@
+/* Advanced theming with smooth transitions */
+.theme-transition {
+  transition: background-color var(--transition-slower), 
+              color var(--transition-slower),
+              border-color var(--transition-slower),
+              box-shadow var(--transition-slower);
+}
+
+/* Apply theme transition to all themed elements */
+*,
+*::before,
+*::after {
+  transition: background-color var(--transition-base), 
+              color var(--transition-base),
+              border-color var(--transition-base),
+              backdrop-filter var(--transition-base);
+}
+
+/* Light theme specific styles */
+[data-theme="light"] {
+  --particle-color: rgba(99, 102, 241, 0.1);
+  --particle-glow: rgba(99, 102, 241, 0.3);
+}
+
+[data-theme="light"] .hero-section {
+  background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+}
+
+[data-theme="light"] .section:nth-child(even) {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.02) 0%, rgba(6, 182, 212, 0.02) 100%);
+}
+
+/* Dark theme specific styles */
+[data-theme="dark"] {
+  --particle-color: rgba(99, 102, 241, 0.2);
+  --particle-glow: rgba(99, 102, 241, 0.5);
+}
+
+[data-theme="dark"] .hero-section {
+  background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .section:nth-child(even) {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.8) 100%);
+}
+
+[data-theme="dark"] .navbar {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Theme-specific glass effects */
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Particle system theming */
+[data-theme="light"] .three-canvas {
+  opacity: 0.6;
+}
+
+[data-theme="dark"] .three-canvas {
+  opacity: 0.8;
+}
+
+/* Glow effects for dark theme */
+[data-theme="dark"] .hero-title .highlight {
+  text-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+}
+
+[data-theme="dark"] .btn-primary {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+}
+
+/* Theme toggle animation enhancement */
+.theme-toggle {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+}
+
+.theme-toggle:hover {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Smooth theme transition for specific components */
+.navbar,
+.hero-section,
+.section,
+.btn,
+.glass-card,
+.footer {
+  transition: all var(--transition-slower) ease;
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  [data-theme="light"] {
+    --color-text-primary: #000000;
+    --color-text-secondary: #333333;
+    --color-border: #666666;
+  }
+  
+  [data-theme="dark"] {
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cccccc;
+    --color-border: #999999;
+  }
+}
+
+/* System theme detection enhancement */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --system-theme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --system-theme: light;
+  }
+}
+
+/* Animation performance optimization for theme switching */
+.theme-switching * {
+  transition: none !important;
+}
+
+/* Custom scrollbar theming */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-light);
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-surface);
+}
+
+/* Theme-specific selection colors */
+[data-theme="light"] ::selection {
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--color-text-primary);
+}
+
+[data-theme="dark"] ::selection {
+  background: rgba(99, 102, 241, 0.4);
+  color: var(--color-text-primary);
+}
+
+/* Focus indicators that respect theme */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Theme-aware backdrop filters */
+[data-theme="light"] .backdrop-blur {
+  backdrop-filter: blur(20px) saturate(180%) brightness(110%);
+}
+
+[data-theme="dark"] .backdrop-blur {
+  backdrop-filter: blur(20px) saturate(180%) brightness(80%);
+}
