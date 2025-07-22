@@ -7,6 +7,8 @@ import { initExperience } from '../../components/experience.js';
 import { initProjects } from '../../components/projects.js';
 import { initLive } from '../../components/live.js';
 import { initWander } from '../../components/wander.js';
+import './data-manager.js';
+import './data-interface.js';
 
 class PortfolioApp {
   constructor() {
@@ -64,11 +66,11 @@ class PortfolioApp {
 
   async initializeComponents() {
     const components = [
-      { name: 'Hero Section', init: initHero },
-      { name: 'Experience Section', init: initExperience },
-      { name: 'Projects Section', init: initProjects },
-      { name: 'Live Section', init: initLive },
-      { name: 'Wander Section', init: initWander }
+      { name: 'Hero Section', init: initHero, globalName: 'heroComponent' },
+      { name: 'Experience Section', init: initExperience, globalName: 'experienceComponent' },
+      { name: 'Projects Section', init: initProjects, globalName: 'projectsComponent' },
+      { name: 'Live Section', init: initLive, globalName: 'liveComponent' },
+      { name: 'Wander Section', init: initWander, globalName: 'wanderComponent' }
     ];
 
     for (const component of components) {
@@ -76,6 +78,10 @@ class PortfolioApp {
         const instance = await component.init();
         if (instance) {
           this.components.push(instance);
+          // Make component globally accessible for data interface
+          if (component.globalName) {
+            window[component.globalName] = instance;
+          }
         }
         console.log(`✓ ${component.name} initialized`);
       } catch (error) {

@@ -92,9 +92,42 @@ Intersection Observer → Animation Triggers → CSS/JS Animations → Performan
 
 ### Browser APIs
 - **Intersection Observer**: Scroll-triggered animations
-- **Local Storage**: Theme persistence
+- **Local Storage**: Theme persistence and data backup
 - **Media Queries**: Responsive design and motion preferences
 - **Web Performance APIs**: Loading optimization
+
+## Content Management System
+
+### Data Manager Architecture (`assets/js/data-manager.js`)
+- **LinkedInDataManager**: Easy LinkedIn post creation with engagement metrics
+- **ExperienceDataManager**: Work experience and IEEE society management
+- **ProjectsDataManager**: Project portfolio with categories and technologies
+- **WanderDataManager**: Blog post creation with reading time calculation
+- **MetricsDataManager**: Live statistics updates and growth tracking
+
+### Data Interface (`assets/js/data-interface.js`)
+- **Browser Console Functions**: Simple functions accessible via browser console
+- **Global Component Access**: Components are globally accessible for real-time updates
+- **Auto-save Functionality**: Automatic backup to localStorage
+- **Quick Templates**: Pre-configured templates for common content types
+
+### Usage (via Browser Console)
+```javascript
+// Add LinkedIn posts
+addContent.linkedinPost(title, content, type);
+
+// Add projects
+addContent.project(title, description, category, technologies);
+
+// Add blog posts
+addContent.blogPost(title, content, category);
+
+// Add experience
+addContent.experience(role, organization, description, duration, skills);
+
+// Update metrics
+addContent.metrics(metricName, current, growth, period);
+```
 
 ## Deployment Strategy
 
