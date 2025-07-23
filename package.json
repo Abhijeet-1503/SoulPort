@@ -1,0 +1,20 @@
+{
+  "name": "future-soul-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Abhijeet Kumar Bhagat - AI Enthusiast, Web Master, Researcher, and Travelling Soul",
+  "author": "Abhijeet Kumar Bhagat",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -o -c-1",
+    "start": "npx http-server . -p 3000 -o -c-1",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "echo 'Deploy to GitHub Pages via GitHub Actions'",
+    "test": "echo 'Tests will be added later'",
+    "lint": "echo 'Add linting later if needed'"
+  },
+  "keywords": ["portfolio", "ai", "web-development", "javascript", "three.js", "ieee", "researcher"],
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+
