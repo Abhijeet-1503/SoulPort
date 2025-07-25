@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijeet Kumar Bhagat - AI Researcher & IEEE Leader</title>
+    <meta name="description" content="Portfolio of     <!-- JavaScript Modules -->
+    <script type="module" src="assets/js/utils.js"></script>
+    <script type="module" src="assets/js/theme-toggle.js"></script>
+    <script type="module" src="assets/js/three-scene.js"></script>
+    <script type="module" src="assets/js/animations.js"></script>
+    <script type="module" src="assets/js/interactive.js"></script>
+    <script type="module" src="assets/js/enhancements.js"></script>
+    <script type="module" src="components/navbar.js"></script>
+    <script type="module" src="components/hero.js"></script>
+    <script type="module" src="components/experience.js"></script>
+    <script type="module" src="components/projects.js"></script>
+    <script type="module" src="components/live.js"></script>
+    <script type="module" src="components/wander.js"></script>
+    <script type="module" src="assets/js/main.js"></script>ar Bhagat - AI Enthusiast, Web Master, Researcher, and Travelling Soul">
+    <meta name="keywords" content="AI, Artificial Intelligence, Web Development, IEEE, Researcher, Portfolio, Technology">
+    <meta name="author" content="Abhijeet Kumar Bhagat">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Abhijeet Kumar Bhagat - AI Researcher & IEEE Leader">
+    <meta property="og:description" content="Portfolio of Abhijeet Kumar Bhagat - AI Enthusiast, Web Master, Researcher, and Travelling Soul">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Abhijeet Kumar Bhagat - AI Researcher & IEEE Leader">
+    <meta property="twitter:description" content="Portfolio of Abhijeet Kumar Bhagat - AI Enthusiast, Web Master, Researcher, and Travelling Soul">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" as="script">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/interactive.css">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Theme detection -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('portfolio-theme');
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            const theme = savedTheme || systemTheme;
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <canvas id="loading-canvas"></canvas>
+            </div>
+            <div class="loading-text">
+                <span>Initializing</span>
+                <div class="loading-dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="three-canvas" class="three-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">AKB</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#live" class="nav-link" data-section="live">Live</a>
+                <a href="#wander" class="nav-link" data-section="wander">Wander</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon sun">☀️</span>
+                    <span class="theme-icon moon">🌙</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="title-line">Abhijeet Kumar</span>
+                            <span class="title-line highlight">Bhagat</span>
+                        </h1>
+                        <div class="hero-subtitle">
+                            <span class="typewriter" data-text="AI Enthusiast | Web Master | Researcher | Travelling Soul"></span>
+                        </div>
+                        <p class="hero-description">
+                            BTech AI student at Marwadi University, IEEE Active Member, and Technical Lead at POSHAN. 
+                            Passionate about building technology that bridges efficiency with meaningful impact.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#experience" class="btn btn-primary" data-hover="explore">
+                                <span class="btn-text">Explore My Journey</span>
+                                <span class="btn-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                </span>
+                                <div class="btn-ripple"></div>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary" data-hover="projects">
+                                <span class="btn-text">View Projects</span>
+                                <span class="btn-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                                    </svg>
+                                </span>
+                                <div class="btn-ripple"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual parallax-container">
+                        <div class="hero-avatar parallax-element float">
+                            <div class="avatar-glow pulse"></div>
+                            <div class="avatar-content">
+                                <span class="avatar-text">AKB</span>
+                            </div>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item" data-animate="counter">
+                                <span class="stat-number" data-count="9">0</span>
+                                <span class="stat-label">IEEE Societies</span>
+                                <div class="stat-progress" style="--progress: 90%"></div>
+                            </div>
+                            <div class="stat-item" data-animate="counter">
+                                <span class="stat-number" data-count="1814">0</span>
+                                <span class="stat-label">LinkedIn Followers</span>
+                                <div class="stat-progress" style="--progress: 75%"></div>
+                            </div>
+                            <div class="stat-item" data-animate="counter">
+                                <span class="stat-number" data-count="30">0</span>
+                                <span class="stat-label">Days SRIT</span>
+                                <div class="stat-progress" style="--progress: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience & Leadership</h2>
+                    <p class="section-subtitle">
+                        Journey through my professional growth, from IEEE leadership to startup innovation
+                    </p>
+                </div>
+                <div class="experience-timeline" id="experience-timeline">
+                    <!-- Timeline items will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Research & Projects</h2>
+                    <p class="section-subtitle">
+                        Cutting-edge AI research and innovative solutions for real-world challenges
+                    </p>
+                </div>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project cards will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Section -->
+        <section id="live" class="section live-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Live Activity</h2>
+                    <p class="section-subtitle">
+                        Real-time insights into my professional network and contributions
+                    </p>
+                </div>
+                <div class="live-content">
+                    <div class="live-metrics" id="live-metrics">
+                        <!-- Metrics will be dynamically generated -->
+                    </div>
+                    <div class="live-feed" id="live-feed">
+                        <!-- LinkedIn feed simulation -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wander Section -->
+        <section id="wander" class="section wander-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Wander & Musings</h2>
+                    <p class="section-subtitle">
+                        Personal reflections, tech insights, and travel experiences
+                    </p>
+                </div>
+                <div class="wander-grid" id="wander-grid">
+                    <!-- Blog-style cards will be dynamically generated -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Abhijeet Kumar Bhagat</h3>
+                    <p>Building the future with AI, one innovation at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/abhijeet" target="_blank" rel="noopener" class="footer-link">
+                        <img src="assets/icons/github.svg" alt="GitHub" width="24" height="24">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/abhijeet" target="_blank" rel="noopener" class="footer-link">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:abhijeet@example.com" class="footer-link">
+                        <img src="assets/icons/email.svg" alt="Email" width="24" height="24">
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Abhijeet Kumar Bhagat. Crafted with passion and innovation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="assets/js/utils.js"></script>
+    <script type="module" src="assets/js/theme-toggle.js"></script>
+    <script type="module" src="assets/js/three-scene.js"></script>
+    <script type="module" src="assets/js/animations.js"></script>
+    <script type="module" src="components/navbar.js"></script>
+    <script type="module" src="components/hero.js"></script>
+    <script type="module" src="components/experience.js"></script>
+    <script type="module" src="components/projects.js"></script>
+    <script type="module" src="components/live.js"></script>
+    <script type="module" src="components/wander.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
