@@ -1,8 +1,4 @@
 {
   "version": 2,
-  "name": "soul-port-portfolio",
-  "public": true,
-  "github": {
-    "silent": true
-  }
+  "name": "soul-port-portfolio"
 }

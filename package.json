@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "npx http-server . -p 3000 -o -c-1",
     "start": "npx http-server . -p 3000 -o -c-1",
-    "build": "echo 'Static site - copying files' && echo 'Build complete'",
     "deploy": "vercel --prod",
     "deploy:preview": "vercel",
     "test": "echo 'Tests will be added later'",
