@@ -8,13 +8,15 @@
     "dev": "npx http-server . -p 3000 -o -c-1",
     "start": "npx http-server . -p 3000 -o -c-1",
     "build": "echo 'Static site - no build needed'",
-    "deploy": "echo 'Deploy to GitHub Pages via GitHub Actions'",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel",
     "test": "echo 'Tests will be added later'",
     "lint": "echo 'Add linting later if needed'"
   },
   "keywords": ["portfolio", "ai", "web-development", "javascript", "three.js", "ieee", "researcher"],
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "vercel": "^37.0.0"
   }
 }
 

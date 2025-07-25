@@ -13,7 +13,9 @@
 
 ## 🚀 Live Demo
 
-Visit the live site: [https://yourusername.github.io/FutureSoulPortfolio](https://yourusername.github.io/FutureSoulPortfolio)
+Visit the live site: 
+- **Vercel**: [https://soul-port-portfolio.vercel.app](https://soul-port-portfolio.vercel.app)
+- **GitHub Pages**: [https://Abhijeet-1503.github.io/SoulPort](https://Abhijeet-1503.github.io/SoulPort)
 
 ## 🛠️ Technology Stack
 
@@ -27,8 +29,8 @@ Visit the live site: [https://yourusername.github.io/FutureSoulPortfolio](https:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/FutureSoulPortfolio.git
-   cd FutureSoulPortfolio
+   git clone https://github.com/Abhijeet-1503/SoulPort.git
+   cd SoulPort
    ```
 
 2. **Install dependencies**
